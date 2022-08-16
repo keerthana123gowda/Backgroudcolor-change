@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackgroundColor change</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+
+        h1 {
+            margin-bottom: 55px;
+            color: white;
+        }
+
+        .btn {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Background Color Change Project</h1>
+        <button class="btn" onclick="change()">Click Me</button>
+
+    </div>
+
+</body>
+<script>
+    var container = document.querySelector('.container');
+
+    function change() {
+        let colors = ["blue", "cyan", "green", "red", "purple", "orange", "black", "deeppink", "wheat", "darkred", "darkcyan", "darkskyblue"];
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        container.style.backgroundColor = color;
+
+    }   
+</script>
+
+</html>
